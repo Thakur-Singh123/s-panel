@@ -1,0 +1,169 @@
+
+/* =========================================
+   SUPPLIER PORTAL - COMMON CSS
+   Shared by Booking, Tour and future pages
+========================================= */
+/* Common loader overlay */
+.sp-loader-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+/* Common loader box */
+.sp-loader-box {
+    background: #fff;
+    padding: 22px 28px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.20);
+    color: #142746;
+}
+/* Common spinner */
+.sp-loader-spinner {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 10px;
+    border: 4px solid #eeeeee;
+    border-top: 4px solid #ff654f;
+    border-radius: 50%;
+    animation: spCommonSpin 0.8s linear infinite;
+}
+.sp-loader-box strong {
+    display: block;
+    font-weight: 600;
+}
+@keyframes spCommonSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Common buttons */
+.sp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #dce4ef;
+    border-radius: 9px;
+    background: #fff;
+    color: #142746;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+}
+.sp-btn-primary {
+    background: #ff9800;
+    border-color: #ff9800;
+    color: #fff;
+}
+.sp-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+/* Common card base */
+.sp-card {
+    background: #fff;
+    border: 1px solid #e0e8f2;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+/* Prevent shared elements from overflowing */
+.sp-card,
+.sp-loader-box,
+.sp-btn {
+    box-sizing: border-box;
+}
+/* Common No Image Found */
+.no-image-found {
+    width: 100%;
+    height: 220px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.no-image-found i {
+    font-size: 25px;
+    margin-bottom: 12px;
+    color: #ff3b30;
+}
+.no-image-found span {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ff3b30;
+}
+@keyframes supplierBookingSpin {
+    to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes tourBookingSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes tlTourSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Common No Data / Error Message */
+.no-data-found,
+.no-image-data,
+.dataTables_empty,
+.no-records-found {
+    color: #ff3b30 !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    padding: 25px 12px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Center Message Inside DataTables */
+table.dataTable td.dataTables_empty {
+    text-align: center !important;
+    vertical-align: middle !important;
+    color: #ff3b30 !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    padding: 25px 12px !important;
+}
+/* Center No Data Message Inside Booking Card */
+.no-data-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 150px;
+    padding: 20px 12px !important;
+    margin: 0px 100px 0px 20px;
+    color: #ff3b30 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    box-sizing: border-box;
+}
+/* No Image Found Message */
+.no-image-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    font-size: 10px !important;
+}
+/* No Records Found */
+.no-records-found {
+    text-align: center !important;
+    font-size: 10px !important;
+}

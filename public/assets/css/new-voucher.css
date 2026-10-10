@@ -1,0 +1,1741 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #ff9500;
+    --primary-dark: #e78300;
+    --primary-soft: #fff6ea;
+
+    --navy: #0e1c36;
+
+    --text: #15233b;
+    --muted: #66758b;
+
+    --green: #0bad6b;
+    --green-soft: #eafaf2;
+
+    --red: #ff533f;
+
+    --blue-soft: #f5f9fd;
+
+    --border: #d9e2ec;
+
+    --page-bg: #edf3f8;
+
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+body {
+
+    background: var(--page-bg);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.voucher-toolbar {
+
+    max-width: 1380px;
+
+    margin:
+        30px auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.back-btn,
+.print-btn {
+
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        0 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.back-btn {
+
+    border:
+        1px solid #cad4df;
+
+    background: #fff;
+
+    color: #15233b;
+}
+
+
+.print-btn {
+
+    min-width: 180px;
+
+    border: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8b00,
+            #ff9e00
+        );
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   DOCUMENT
+========================================================= */
+
+.voucher-document {
+
+    max-width: 1380px;
+
+    margin:
+        0 auto 30px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    box-shadow:
+        0 18px 50px
+        rgba(21,35,59,.08);
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.voucher-company-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        30px 38px;
+}
+
+
+.voucher-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.voucher-logo {
+
+    width: 170px;
+
+    max-height: 100px;
+
+    object-fit: contain;
+}
+
+
+.voucher-brand-divider {
+
+    width: 1px;
+
+    height: 55px;
+
+    background: #d4dde7;
+}
+
+
+.official-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.voucher-brand h1 {
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 32px;
+
+    line-height: 1.1;
+}
+
+
+.company-info {
+
+    text-align: right;
+}
+
+
+.company-info h2 {
+
+    margin:
+        0 0 8px;
+
+    color: var(--navy);
+
+    font-size: 24px;
+}
+
+
+.company-info p {
+
+    margin:
+        4px 0;
+
+    color: #526179;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOOKING REFERENCE
+========================================================= */
+
+.booking-reference-strip {
+
+    margin:
+        0 38px;
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        16px 24px;
+
+    border-radius: 11px;
+
+    background: var(--navy);
+
+    color: #fff;
+}
+
+
+.booking-reference-strip > div:first-child span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #aec2e2;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.booking-reference-strip > div:first-child strong {
+
+    font-size: 22px;
+}
+
+
+.confirmed-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        9px 17px;
+
+    border:
+        1px solid rgba(20,210,130,.35);
+
+    border-radius: 30px;
+
+    background:
+        rgba(7,165,100,.16);
+
+    color: #54e39e;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CONFIRMATION BOX
+========================================================= */
+
+.booking-confirmed-box {
+
+    margin:
+        15px 38px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        15px 19px;
+
+    border:
+        1px solid #aee7c9;
+
+    border-radius: 10px;
+
+    background: var(--green-soft);
+}
+
+
+.booking-confirmed-icon {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: #fff;
+
+    font-size: 22px;
+}
+
+
+.booking-confirmed-box strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #087845;
+
+    font-size: 13px;
+}
+
+
+.booking-confirmed-box p {
+
+    margin: 0;
+
+    color: #395f4e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   QUICK GRID
+========================================================= */
+
+.booking-quick-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin:
+        15px 38px 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+
+.quick-info-box {
+
+    min-height: 80px;
+
+    padding:
+        16px 18px;
+
+    border-right:
+        1px solid var(--border);
+}
+
+
+.quick-info-box:last-child {
+
+    border-right: 0;
+}
+
+
+.quick-info-box span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #7d8ba2;
+
+    font-size: 10px;
+
+    letter-spacing: .5px;
+}
+
+
+.quick-info-box strong {
+
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SERVICE
+========================================================= */
+
+.service-card {
+
+    margin:
+        15px 38px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        230px
+        1fr;
+
+    gap: 20px;
+
+    padding: 16px;
+
+    border:
+        1px solid #ffd2c7;
+
+    border-radius: 10px;
+
+    background: #fff9f6;
+}
+
+
+.service-image {
+
+    min-height: 140px;
+}
+
+
+.service-image img {
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+.service-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.service-type {
+
+    align-self: flex-start;
+
+    display: inline-flex;
+
+    margin-bottom: 8px;
+
+    padding:
+        6px 11px;
+
+    border-radius: 20px;
+
+    background: #ffe8e2;
+
+    color: #f04a31;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.service-content h2 {
+
+    margin:
+        0 0 11px;
+
+    color: var(--navy);
+
+    font-size: 22px;
+
+    line-height: 1.25;
+}
+
+
+.service-content p {
+
+    margin:
+        3px 0;
+
+    color: #41526a;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TWO COLUMN
+========================================================= */
+
+.two-column-section {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+    margin:
+        15px 38px 0;
+}
+
+
+.info-card,
+.full-info-card,
+.emergency-box,
+.qr-box {
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #fff;
+}
+
+
+.info-card {
+
+    min-height: 145px;
+
+    padding: 20px;
+}
+
+
+.card-label,
+.section-orange-title {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
+}
+
+
+.info-card h3 {
+
+    margin:
+        0 0 9px;
+
+    color: var(--navy);
+
+    font-size: 16px;
+}
+
+
+.info-card p {
+
+    margin:
+        7px 0;
+
+    color: #42536a;
+
+    font-size: 12px;
+}
+
+
+.agent-badge {
+
+    display: inline-flex;
+
+    margin-bottom: 5px;
+
+    padding:
+        6px 10px;
+
+    border-radius: 6px;
+
+    background: #eaf3ff;
+
+    color: #2367c7;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTENT LISTS
+========================================================= */
+
+.voucher-html-content {
+
+    color: #34465e;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+}
+
+
+.voucher-html-content ul,
+.notes-list {
+
+    margin: 0;
+
+    padding-left: 18px;
+}
+
+
+.voucher-html-content li,
+.notes-list li {
+
+    margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   FULL CARDS
+========================================================= */
+
+.full-info-card {
+
+    margin:
+        15px 38px 0;
+
+    padding: 18px 20px;
+}
+
+
+/* =========================================================
+   TRANSFER DETAILS
+========================================================= */
+
+.transfer-detail-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.transfer-detail-grid > div {
+
+    padding: 12px;
+
+    border:
+        1px solid #e6ebf1;
+
+    border-radius: 8px;
+
+    background: #fafbfd;
+}
+
+
+.transfer-detail-grid span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8491a4;
+
+    font-size: 9px;
+}
+
+
+.transfer-detail-grid strong {
+
+    color: #26364e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.notes-list {
+
+    color: #354861;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   EMERGENCY + QR
+========================================================= */
+
+.emergency-qr-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 270px;
+
+    gap: 15px;
+
+    margin:
+        15px 38px 0;
+}
+
+
+.emergency-box {
+
+    padding: 20px;
+}
+
+
+.emergency-box p {
+
+    margin:
+        6px 0;
+
+    color: #34465e;
+
+    font-size: 11px;
+}
+
+
+.qr-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px;
+
+    text-align: center;
+
+    background: #fafbfd;
+}
+
+
+.fake-qr {
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 8px;
+
+    border:
+        1px solid #d8e0e9;
+
+    background: #fff;
+
+    font-size: 76px;
+
+    color: var(--navy);
+}
+
+
+.qr-box span {
+
+    color: #6d7b90;
+
+    font-size: 9px;
+}
+
+
+.qr-box strong {
+
+    margin-top: 2px;
+
+    color: var(--navy);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.voucher-footer {
+
+    margin-top: 25px;
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        18px 38px;
+
+    border-top:
+        1px solid var(--border);
+
+    background: #f7f9fc;
+}
+
+
+.voucher-footer strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+
+.voucher-footer p {
+
+    margin: 0;
+
+    color: #65758c;
+
+    font-size: 10px;
+}
+
+
+.voucher-authorized {
+
+    text-align: right;
+}
+
+
+.voucher-authorized span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #7d8ba0;
+
+    font-size: 9px;
+}
+
+
+.voucher-authorized strong {
+
+    font-size: 12px;
+}
+
+
+.voucher-computer-note {
+
+    padding:
+        9px 20px;
+
+    text-align: center;
+
+    border-top:
+        1px solid #e7edf3;
+
+    color: #91a0b4;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width: 850px) {
+
+    .voucher-company-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .company-info {
+
+        text-align: left;
+    }
+
+
+    .booking-quick-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .quick-info-box:nth-child(2) {
+
+        border-right: 0;
+    }
+
+
+    .quick-info-box:nth-child(-n+2) {
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .service-card {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .two-column-section,
+    .emergency-qr-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .transfer-detail-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width: 550px) {
+
+    .voucher-toolbar {
+
+        margin:
+            15px 12px;
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .back-btn,
+    .print-btn {
+
+        width: 100%;
+    }
+
+
+    .voucher-document {
+
+        border-radius: 0;
+    }
+
+
+    .voucher-company-header,
+    .voucher-footer {
+
+        padding:
+            20px;
+    }
+
+
+    .voucher-brand {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .voucher-brand-divider {
+
+        display: none;
+    }
+
+
+    .voucher-logo {
+
+        width: 140px;
+    }
+
+
+    .booking-reference-strip,
+    .booking-confirmed-box,
+    .booking-quick-grid,
+    .service-card,
+    .two-column-section,
+    .full-info-card,
+    .emergency-qr-grid {
+
+        margin-left: 15px;
+
+        margin-right: 15px;
+    }
+
+
+    .booking-reference-strip {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .booking-quick-grid,
+    .transfer-detail-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .quick-info-box {
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .quick-info-box:last-child {
+
+        border-bottom: 0;
+    }
+
+
+    .voucher-footer {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .voucher-authorized {
+
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   PRINT - ONE PAGE LANDSCAPE
+========================================================= */
+
+@page {
+
+    size: A4 landscape;
+
+    margin: 2mm;
+}
+
+
+@media print {
+
+    html,
+    body {
+
+        width: 297mm !important;
+
+        height: 210mm !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        background: #fff !important;
+
+        -webkit-print-color-adjust:
+            exact !important;
+
+        print-color-adjust:
+            exact !important;
+    }
+
+
+    body * {
+
+        visibility:
+            hidden !important;
+    }
+
+
+    #printableArea,
+    #printableArea * {
+
+        visibility:
+            visible !important;
+    }
+
+
+    #printableArea {
+
+        position:
+            absolute !important;
+
+        top: 0 !important;
+
+        left: 0 !important;
+
+        width: 293mm !important;
+
+        height: 206mm !important;
+
+        overflow: hidden !important;
+
+        transform:
+            scale(.87);
+
+        transform-origin:
+            top left;
+
+        width:
+            114.94% !important;
+    }
+
+
+    .no-print {
+
+        display: none !important;
+    }
+
+
+    .voucher-document {
+
+        width: 293mm !important;
+
+        max-width: 293mm !important;
+
+        margin: 0 !important;
+
+        border-radius: 0 !important;
+
+        box-shadow: none !important;
+    }
+
+
+    /* HEADER */
+
+    .voucher-company-header {
+
+        padding:
+            3mm 5mm !important;
+    }
+
+
+    .voucher-logo {
+
+        width:
+            24mm !important;
+
+        max-height:
+            14mm !important;
+    }
+
+
+    .voucher-brand {
+
+        gap:
+            3mm !important;
+    }
+
+
+    .voucher-brand-divider {
+
+        height:
+            12mm !important;
+    }
+
+
+    .official-label {
+
+        margin-bottom:
+            1mm !important;
+
+        font-size:
+            1.6mm !important;
+
+        letter-spacing:
+            .35mm !important;
+    }
+
+
+    .voucher-brand h1 {
+
+        font-size:
+            4.2mm !important;
+    }
+
+
+    .company-info h2 {
+
+        margin-bottom:
+            1mm !important;
+
+        font-size:
+            3.3mm !important;
+    }
+
+
+    .company-info p {
+
+        margin:
+            .3mm 0 !important;
+
+        font-size:
+            1.5mm !important;
+    }
+
+
+    /* REFERENCE */
+
+    .booking-reference-strip {
+
+        min-height:
+            13mm !important;
+
+        margin:
+            0 5mm !important;
+
+        padding:
+            2mm 4mm !important;
+    }
+
+
+    .booking-reference-strip > div:first-child span {
+
+        font-size:
+            1.3mm !important;
+    }
+
+
+    .booking-reference-strip > div:first-child strong {
+
+        font-size:
+            2.8mm !important;
+    }
+
+
+    .confirmed-badge {
+
+        padding:
+            1.2mm 2.5mm !important;
+
+        font-size:
+            1.5mm !important;
+    }
+
+
+    /* CONFIRMED */
+
+    .booking-confirmed-box {
+
+        margin:
+            2mm 5mm 0 !important;
+
+        gap:
+            2mm !important;
+
+        padding:
+            1.8mm 3mm !important;
+    }
+
+
+    .booking-confirmed-icon {
+
+        width:
+            7mm !important;
+
+        height:
+            7mm !important;
+
+        font-size:
+            3mm !important;
+    }
+
+
+    .booking-confirmed-box strong {
+
+        font-size:
+            1.7mm !important;
+    }
+
+
+    .booking-confirmed-box p {
+
+        font-size:
+            1.3mm !important;
+    }
+
+
+    /* QUICK */
+
+    .booking-quick-grid {
+
+        margin:
+            2mm 5mm 0 !important;
+    }
+
+
+    .quick-info-box {
+
+        min-height:
+            12mm !important;
+
+        padding:
+            2mm 3mm !important;
+    }
+
+
+    .quick-info-box span {
+
+        margin-bottom:
+            .6mm !important;
+
+        font-size:
+            1.2mm !important;
+    }
+
+
+    .quick-info-box strong {
+
+        font-size:
+            1.6mm !important;
+    }
+
+
+    /* SERVICE */
+
+    .service-card {
+
+        grid-template-columns:
+            35mm 1fr !important;
+
+        gap:
+            3mm !important;
+
+        margin:
+            2mm 5mm 0 !important;
+
+        padding:
+            2mm !important;
+    }
+
+
+    .service-image {
+
+        min-height:
+            20mm !important;
+    }
+
+
+    .service-image img {
+
+        min-height:
+            20mm !important;
+
+        height:
+            20mm !important;
+    }
+
+
+    .service-type {
+
+        margin-bottom:
+            .8mm !important;
+
+        padding:
+            .8mm 1.5mm !important;
+
+        font-size:
+            1.3mm !important;
+    }
+
+
+    .service-content h2 {
+
+        margin:
+            0 0 1mm !important;
+
+        font-size:
+            2.7mm !important;
+    }
+
+
+    .service-content p {
+
+        margin:
+            .4mm 0 !important;
+
+        font-size:
+            1.4mm !important;
+    }
+
+
+    /* CARDS */
+
+    .two-column-section {
+
+        gap:
+            2mm !important;
+
+        margin:
+            2mm 5mm 0 !important;
+    }
+
+
+    .info-card {
+
+        min-height:
+            0 !important;
+
+        padding:
+            2mm 3mm !important;
+    }
+
+
+    .card-label,
+    .section-orange-title {
+
+        margin-bottom:
+            1mm !important;
+
+        font-size:
+            1.4mm !important;
+
+        letter-spacing:
+            .2mm !important;
+    }
+
+
+    .info-card h3 {
+
+        margin-bottom:
+            .8mm !important;
+
+        font-size:
+            2mm !important;
+    }
+
+
+    .info-card p {
+
+        margin:
+            .5mm 0 !important;
+
+        font-size:
+            1.4mm !important;
+    }
+
+
+    .agent-badge {
+
+        margin-bottom:
+            .5mm !important;
+
+        padding:
+            .8mm 1.3mm !important;
+
+        font-size:
+            1.2mm !important;
+    }
+
+
+    .voucher-html-content,
+    .voucher-html-content li,
+    .notes-list,
+    .notes-list li {
+
+        font-size:
+            1.3mm !important;
+
+        line-height:
+            1.25 !important;
+    }
+
+
+    .voucher-html-content li,
+    .notes-list li {
+
+        margin-bottom:
+            .45mm !important;
+    }
+
+
+    /* FULL */
+
+    .full-info-card {
+
+        margin:
+            2mm 5mm 0 !important;
+
+        padding:
+            1.8mm 3mm !important;
+    }
+
+
+    /* EMERGENCY */
+
+    .emergency-qr-grid {
+
+        grid-template-columns:
+            1fr 40mm !important;
+
+        gap:
+            2mm !important;
+
+        margin:
+            2mm 5mm 0 !important;
+    }
+
+
+    .emergency-box {
+
+        padding:
+            2mm 3mm !important;
+    }
+
+
+    .emergency-box p {
+
+        margin:
+            .45mm 0 !important;
+
+        font-size:
+            1.3mm !important;
+    }
+
+
+    .qr-box {
+
+        padding:
+            1.5mm !important;
+    }
+
+
+    .fake-qr {
+
+        width:
+            19mm !important;
+
+        height:
+            19mm !important;
+
+        margin-bottom:
+            1mm !important;
+
+        font-size:
+            14mm !important;
+    }
+
+
+    .qr-box span,
+    .qr-box strong {
+
+        font-size:
+            1.2mm !important;
+    }
+
+
+    /* FOOTER */
+
+    .voucher-footer {
+
+        min-height:
+            13mm !important;
+
+        margin-top:
+            2mm !important;
+
+        padding:
+            2mm 5mm !important;
+    }
+
+
+    .voucher-footer strong {
+
+        margin-bottom:
+            .5mm !important;
+
+        font-size:
+            1.6mm !important;
+    }
+
+
+    .voucher-footer p {
+
+        font-size:
+            1.2mm !important;
+    }
+
+
+    .voucher-authorized span {
+
+        font-size:
+            1.1mm !important;
+    }
+
+
+    .voucher-authorized strong {
+
+        font-size:
+            1.5mm !important;
+    }
+
+
+    .voucher-computer-note {
+
+        padding:
+            1mm !important;
+
+        font-size:
+            1mm !important;
+    }
+
+
+    * {
+
+        break-inside:
+            avoid !important;
+
+        page-break-inside:
+            avoid !important;
+    }
+
+}
